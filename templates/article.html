@@ -1,6 +1,10 @@
-{% extends "base.html" %} {% block title %}{{ article.title|striptags }}{% endblock %} {% block keywords %}
-<meta name="keywords" content="{{ article.keywords }}"> {% endblock keywords %} {% block description %}
-<meta name="description" content="{{ article.description }}"> {% endblock description %} {% block content %}
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }}{% endblock %}
+{% block keywords %}
+<meta name="keywords" content="{{ article.keywords }}"> {% endblock keywords %}
+{% block description %}
+<meta name="description" content="{{ article.description }}"> {% endblock description %}
+{% block content %}
 <div class="page-container">
     <div class="entry-content">
         <div class="post-meta pure-g">
@@ -11,12 +15,19 @@
             {% endif %}
             <!-- {% include "includes/post_metadata.html" %} -->
             <div class="pure-u-3-4 meta-data">
-                <a href="{{ SITEURL }}/{{ article.category.url }}" class="category">{{ article.category }}</a><br /> {% for author in article.authors %}
-                <a class="author" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> {% endfor %} &nbsp;&nbsp; <abbr title="{{ article.date.isoformat() }}" style="border:0; text-decoration:none; border-bottom:none">{{ article.locale_date }}</abbr>                &nbsp;&nbsp; <abbr style="border:0; text-decoration:none; border-bottom:none" id="busuanzi_container_site_pv">阅读&nbsp;<abbr id="busuanzi_value_site_pv"></abbr>&nbsp;次</abbr>
-                {% if article.readtime_minutes %} &mdash; {{ article.readtime_minutes }} min read {% endif %}
-            </div>
+                <a href="{{ SITEURL }}/{{ article.category.url }}" class="category">{{ article.category }}</a><br />
+                {% for author in article.authors %}
+                <a class="author" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %} &nbsp;&nbsp;
+                <abbr title="{{ article.date.isoformat() }}" style="border:0; text-decoration:none; border-bottom:none">{{ article.locale_date }}</abbr>                &nbsp;&nbsp;
+                <!-- <abbr style="border:0; text-decoration:none; border-bottom:none" id="busuanzi_container_site_pv">阅读&nbsp;<abbr id="busuanzi_value_site_pv"></abbr>&nbsp;次</abbr> -->
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            {% if article.readtime_minutes %} &mdash; {{ article.readtime_minutes }} min read {% endif %}
         </div>
     </div>
+</div>
 
     <div class="article-header-container">
         <div class="background-image-container">

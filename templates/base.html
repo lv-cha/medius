@@ -56,10 +56,12 @@
         <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a> {% endfor %} {% endif %} {% if DISPLAY_CATEGORIES_ON_MENU %} {% for cat, null in categories %}
         <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a> {% endfor %} {% endif %} {% for title, link in LINKS %}
         <a href="{{ link }}">{{ title }}</a> {% endfor %}
+        <!--
         <div>
             <abbr id="busuanzi_container_site_uv">访问量&nbsp;<span id="busuanzi_value_site_pv"></span></abbr>
             <abbr id="busuanzi_container_site_uv">访客量&nbsp;<span id="busuanzi_value_site_uv"></span></abbr>
         </div>
+        -->
     </footer>
     {% include "analytics.html" %}
 </body>
