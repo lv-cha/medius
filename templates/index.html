@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+<!-- {% extends "base.html" %} -->
 {% block content %}
 <div class="main-container">
     <div class="pure-g">
@@ -11,9 +11,10 @@
             </div>
             {% endif %}
 
-            {% include "includes/posts.html" %}
+            <!-- {% include "includes/posts.html" %} -->
 
-            {% include "pagination.html" %}
+            <!-- {% include "pagination.html" %} -->
+
 
         </div>
 
@@ -24,9 +25,9 @@
                          Tags
                     </div>
                     <div class="tags">
-                    {% for tag, null in tags %}
-                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                    {% endfor %}
+                        {% for tag, null in tags %}
+                        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
