@@ -5,10 +5,10 @@
     {% block head %}
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> {% block keywords %}
-    <meta name="keywords" content="公子绿茶,Python,大数据,异常"> {% endblock keywords %} {% block description %}
-    <meta name="description" content="公子绿茶是一个个人博客, 在这里你可能会见到很多网上不能见到的Python, 大数据, Hadoop生态等优质博客.绿茶致力于分享优质内容."> {% endblock description %}
-    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block keywords %} <meta name="keywords" content="公子绿茶,Python,大数据,异常"> {% endblock keywords %}
+    {% block description %}<meta name="description" content="公子绿茶是一个个人博客, 在这里你可能会见到很多网上不能见到的Python, 大数据, Hadoop生态等优质博客.绿茶致力于分享优质内容."> {% endblock description %}
+    <meta name="referrer" content="referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
