@@ -20,7 +20,7 @@
                 {% for author in article.authors %}
                 <a class="author" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                 {% endfor %}
-                &emsp;
+                &nbsp;
                 <abbr title="{{ article.date.isoformat() }}" style="border:0; text-decoration:none; border-bottom:none">{{ article.locale_date }}</abbr>                &nbsp;&nbsp;
                 <abbr style="border:0; text-decoration:none; border-bottom:none" id="busuanzi_container_page_pv">阅读&nbsp;<abbr id="busuanzi_value_page_pv"></abbr>&nbsp;次</abbr>
 
